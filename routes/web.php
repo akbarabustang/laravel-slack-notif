@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/slack', function () {
+    //this is will cause an error and then the error msg will send to slack channel
+    return $a;
+});

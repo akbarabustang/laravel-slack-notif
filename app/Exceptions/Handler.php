@@ -4,6 +4,7 @@ namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
+use Log;
 
 class Handler extends ExceptionHandler
 {
@@ -36,6 +37,7 @@ class Handler extends ExceptionHandler
      */
     public function report(Throwable $exception)
     {
+        Log::critical($exception->getMessage());
         parent::report($exception);
     }
 
